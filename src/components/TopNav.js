@@ -2,9 +2,9 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
   return (
     <div className="flex items-center justify-between sticky z-10 top-0 bg-[#1e2024] min-h-[50px] px-8">
       <div>
-        <a href="https://flowbite.com/" class="flex items-center">
+        <a href="https://github.com/MugiranezaJ" class="flex items-center">
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
+            src="https://apps.microsoft.com/store/images/logo-40x40.png"
             class="h-4 mr-3 sm:h-6"
             alt="Flowbite Logo"
           />

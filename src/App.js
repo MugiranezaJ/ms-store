@@ -24,7 +24,7 @@ function App() {
         />
         <div className="flex relative min-h-screen mx-auto">
           <SideBar />
-          <div className=" pl-24 bg-[#232736] bg-opacity-40 rounded w-full py-4 px-3">
+          <div className="pl-20 bg-[#232736] bg-opacity-40 rounded w-full pb-4">
             <AppRoutes />
           </div>
         </div>
