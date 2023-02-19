@@ -5,8 +5,8 @@ const VerticalCard = () => {
                 <div className=" w-24 h-24 border border-slate-600 bg-slate-700 rounded"></div>
             </div>
             <div className="flex flex-col justify-center">
-                <span className=" text-sm">Typing Master 11</span>
-                <span className=" text-xs text-neutral-300">Education</span>
+                <span className="text-sm line-clamp-2">Typing Master 11</span>
+                <span className=" text-xs text-neutral-300 line-clamp-1">Education</span>
             </div>
             <div className="bottom-2 w-fit px-2 mb-4 rounded-md shadow-sm shadow-gray-800">
                 Paid
