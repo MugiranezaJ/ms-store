@@ -23,7 +23,7 @@ export const dataRenderer = async (data) => {
         >See details</button>
     </div>
     `;
-    renderedData.push({ image: content?.image, caption: caption });
+    renderedData.push({ image: content?.image, caption: caption, details: content?.details });
   }
   console.log("RENDERED_DATA: ", renderedData);
   return renderedData;

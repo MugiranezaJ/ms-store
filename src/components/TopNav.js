@@ -1,19 +1,19 @@
 const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
   return (
-    <div className="flex items-center justify-between sticky z-10 top-0 bg-[#1e2024] min-h-[50px] px-8">
+    <div className="flex items-center justify-between sticky z-10 top-0 bg-[#1e2024] min-h-[50px] pl-8 md:pr-8">
       <div>
-        <a href="https://github.com/MugiranezaJ" class="flex items-center">
+        <a href="https://github.com/MugiranezaJ" className="flex items-center">
           <img
             src="https://apps.microsoft.com/store/images/logo-40x40.png"
             class="h-4 mr-3 sm:h-6"
-            alt="Flowbite Logo"
+            alt="Microsoft Store Icon"
           />
-          <span class="self-center text-sm whitespace-nowrap dark:text-white">
+          <span class="self-center w-fit text-sm whitespace-nowrap text-ellipsis dark:text-white">
             Microsoft Store
           </span>
         </a>
       </div>
-      <div className=" flex-auto max-w-xl box-border">
+      <div className=" flex-auto max-w-xl mx-4 box-border">
         <form>
           <label
             for="default-search"
@@ -25,7 +25,7 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
             <input
               type="search"
               id="default-search"
-              class="block w-full p-2  text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="block w-full p-2 pr-8 text-ellipsis text-sm  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search apps, games, movies, and more"
               required
             />
@@ -55,7 +55,7 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
       <div class="flex relative items-center md:order-2">
         <button
           type="button"
-          class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+          class="flex mr-3 text-sm bg-gray-700 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
           id="user-menu-button"
           aria-expanded="false"
           data-dropdown-toggle="user-dropdown"
@@ -64,8 +64,8 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
         >
           <span class="sr-only">Open user menu</span>
           <img
-            class="w-8 h-8 rounded-full"
-            src="/docs/images/people/profile-picture-3.jpg"
+            class="w-8 rounded-full"
+            src="https://static.thenounproject.com/png/5100711-200.png"
             alt="user avator"
           />
         </button>

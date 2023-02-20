@@ -17,7 +17,7 @@ function App() {
 
   return (
     <BrowserRouter history={history}>
-      <div className="flex-1 bg-[#232736] text-white">
+      <div className="flex-1 bg-[#3d4458] text-white">
         <TopNav
           showUserMenu={showUserMenu}
           toggleOpenUserMenu={toggleOpenUserMenu}

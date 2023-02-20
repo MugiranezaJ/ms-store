@@ -1,10 +1,7 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { Carousel } from "react-carousel-minimal";
-import { dataRenderer } from "../Util/helpers";
+import React from 'react';
+import Carousel from "./Carousel/Carousel";
 
 const ImageCarousel = () => {
-  const [sliderContent, setSliderContent] = useState([]);
   const data = [
     {
       image:
@@ -53,71 +50,26 @@ const ImageCarousel = () => {
     },
   ];
 
-  const captionStyle = {
-    fontSize: "2em",
-    fontWeight: "bold",
-    textAlign: "left",
-  };
 
-  useEffect(() => {
-    async function fetchData() {
-      let renderedData = await dataRenderer(data);
-      setSliderContent(renderedData);
-      console.log("Data: ", data);
-    }
-    fetchData();
-    console.log("Logging...........................");
-  }, []);
-  useEffect(() => {
-    const thumbnailStyle = document.getElementById("thumbnail-div");
-    const thumbnail = document.getElementsByClassName("thumbnail");
-    //   console.log(thumbnail)
-    console.log("trying to set style........................");
-    if (thumbnailStyle?.style) {
-      console.log("setting styles...............................");
-      thumbnailStyle.style.cssText = `
-        position: relative;
-        max-wdth: 100%;
-        margin-top: -80px;
-        justify-content: center;
-        align-items: initial;
-        z-index: 5;
-        `;
-      for (let i = 0; i < thumbnail.length; i++) {
-        thumbnail[i].style.borderRadius = "20px";
-        thumbnail[i].alt = "a caption"
-      }
-    }
-  }, [sliderContent.length]);
   return (
-    <div style={{ textAlign: "center" }}>
-      {sliderContent.length && (
+    <React.Fragment>
+      {data.length && (
         <Carousel
-          data={sliderContent}
+          data={data}
           time={2000}
           width="100%"
           height="700px"
-          captionStyle={captionStyle}
           radius="10px 0 0 0"
           // slideNumber={true}
           // slideNumberStyle={slideNumberStyle}
           captionPosition="center"
           automatic={true}
-          // dots={true}
-          // pauseIconColor="white"
-          // pauseIconSize="40px"
           slideBackgroundColor="darkgrey"
           slideImageFit="cover"
           thumbnails={true}
-          thumbnailWidth="170px"
-          style={{
-            maxWidth: "100%",
-            // maxHeight: "500px",
-            marginBottom: "20px",
-          }}
         />
       )}
-    </div>
+    </React.Fragment>
   );
 };
 
