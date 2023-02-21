@@ -8,7 +8,7 @@ const RatingProgressBar = ({ percentage, rateIndex }) => {
       <StarIcon />
       <div class="w-2/4 h-2 mx-4 bg-gray-200 rounded dark:bg-gray-700">
         <div
-          class="h-2 bg-yellow-400 rounded"
+          class="h-2 bg-orange-500 rounded"
           style={{ width: percentage + "%" }}
         ></div>
       </div>

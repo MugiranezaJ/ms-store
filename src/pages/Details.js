@@ -16,24 +16,84 @@ import {
   TagIcon,
   ShieldCheckIcon,
   ChatBubbleLeftRightIcon,
+  ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 import VerticalCard from "../components/VerticalCard";
+import StarIcon from "../components/StarIcon";
 
 const Details = () => {
   const navigate = useNavigate();
   return (
     <div className="flex justify-between h-fit pr-2">
       {/* Side panel */}
-      <div className="fixed w-80 min-h-[calc(100vh-60px)] rounded-lg bg-slate-500 bg-opacity-40">
-        #1
+      <div className="fixed flex w-[380px] min-h-[calc(100vh-60px)] p-3 rounded-lg bg-slate-500 bg-opacity-40">
+        <div className="flex flex-col items-center w-full text-center space-y-16">
+          <div>
+            <div className="flex justify-center items-center p-2 pt-5 mt-5">
+              <div className=" w-[136px] h-[136px] border border-slate-600 bg-slate-700 rounded"></div>
+            </div>
+            <div className="flex flex-col justify-center">
+              <span className="text-3xl font-bold line-clamp-2">WhatsApp</span>
+              <span className=" text-sm text-neutral-300 line-clamp-1">
+                WhatsApp Inc.
+              </span>
+            </div>
+          </div>
+          <button className=" w-44 py-1 mb-4 rounded-md text-black bg-blue-400 shadow-sm shadow-grawy-800">
+            Get
+          </button>
+          <div className="flex divide-x divide-gray-500">
+            <div className="flex flex-col w-24 items-center">
+              <div className="flex items-center space-x-1">
+                <p className="text-lg font-semibold">4.1</p>
+                <StarIcon />
+              </div>
+              <span className="text-xs text-gray-300">Average</span>
+            </div>
+            <div className="flex flex-col w-24 items-center border-l-2d">
+              <div className="flex items-center space-x-1">
+                <p className="text-lg font-semibold">23</p>
+              </div>
+              <span className="text-xs text-gray-300">Rating</span>
+            </div>
+          </div>
+          <div className="space-y-10 w-5/6 text-sm">
+            <p className="line-clamp-3">
+              WhatsApp from Meta is a 100% free messaging app. It's used by over
+              2B people in more than 180 countries. It's simple, reliable, and
+              private,...
+            </p>
+            <button className="bottom-2 w-fit px-5 py-1 text-sm mb-4 rounded-xl shadow-sm shadow-gray-800">
+              Social
+            </button>
+          </div>
+        </div>
+        <div className="absolute w-[calc(100%-24px)] flex justify-between bottom-5 box-border">
+          <div className="flex">
+            <img
+              className=" w-12 max-w-xl"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/IARC_3%2B.svg/1680px-IARC_3%2B.svg.png"
+              alt="description"
+            />
+            <div className="flex flex-col justify-end pl-2">
+              <span className="font-bold">3+</span>
+              <span className="text-gray-300 text-xs">Users interact</span>
+            </div>
+          </div>
+          <div className="flex items-end">
+            <button className="text-blue-300 rounded-sm hover:bg-slate-400 p-2">
+              <ArrowTopRightOnSquareIcon className="w-5" />
+            </button>
+          </div>
+        </div>
       </div>
       {/* Main body */}
-      <div className="h-fit ml-[330px] space-y-3">
+      <div className="h-fit ml-[390px] space-y-3">
         {/* Description */}
         <div className="relative min-h-fit pb-8 rounded-lg bg-slate-500 bg-opacity-40">
-          <p className="p-3">Description</p>
+          <p className="p-3">Screenshots</p>
           <HR />
           <div className="p-3">Some images here!</div>
         </div>
@@ -130,15 +190,15 @@ const Details = () => {
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="w-4 text-green-400" />
-                  <span>#1</span>
+                  <span>Keyboard: Not specified</span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="w-4 text-green-400" />
-                  <span>#2</span>
+                  <span>Mouse: Not specified</span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="w-4 text-green-400" />
-                  <span>#3</span>
+                  <span>Camera: Not specified</span>
                 </li>
               </ul>
             </div>

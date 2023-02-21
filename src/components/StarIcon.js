@@ -5,7 +5,7 @@ const StarIcon = () => {
     <React.Fragment>
       <svg
         aria-hidden="true"
-        class="w-5 h-5 text-yellow-400"
+        class="w-5 h-5 text-orange-500"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
