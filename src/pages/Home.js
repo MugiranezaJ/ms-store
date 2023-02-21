@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import HolizontalCard from "../components/HolizontalCard";
 import ImageCarousel from "../components/ImageCarousel";
 import VerticalCard from "../components/VerticalCard";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       {/* Image Carousel */}
@@ -20,14 +22,14 @@ const Home = () => {
             </a>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-4">
-            <HolizontalCard />
-            <HolizontalCard />
-            <HolizontalCard />
-            <HolizontalCard />
-            <HolizontalCard />
-            <HolizontalCard />
-            <HolizontalCard />
-            <HolizontalCard />
+            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate = {navigate}/>
           </div>
         </div>
 
