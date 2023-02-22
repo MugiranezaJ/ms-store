@@ -1,6 +1,8 @@
 const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
   return (
     <div className="flex items-center justify-between sticky z-10 top-0 bg-[#1e2024] min-h-[50px] pl-8 md:pr-8">
+
+      {/* Website icon */}
       <div>
         <a href="https://github.com/MugiranezaJ" className="flex items-center">
           <img
@@ -13,7 +15,9 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
           </span>
         </a>
       </div>
-      <div className=" flex-auto max-w-xl mx-4 box-border">
+
+      {/* Search */}
+      <div className="hidden sm:block flex-auto max-w-xl mx-4 box-border">
         <form>
           <label
             for="default-search"
@@ -21,11 +25,11 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
           >
             Search
           </label>
-          <div class="relative">
+          <div class="relative text-white">
             <input
               type="search"
               id="default-search"
-              class="block w-full p-2 pr-8 text-ellipsis text-sm  text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              class="block w-full p-2 pr-8 text-ellipsis text-sm  text-gray-900s border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Search apps, games, movies, and more"
               required
             />
@@ -35,7 +39,7 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
             >
               <svg
                 aria-hidden="true"
-                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                class="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -52,6 +56,8 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
           </div>
         </form>
       </div>
+
+      {/* User account */}
       <div class="flex relative items-center md:order-2">
         <button
           type="button"
@@ -119,10 +125,10 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
             </li>
           </ul>
         </div>
-        {/* <button
+        <button
           data-collapse-toggle="mobile-menu-2"
           type="button"
-          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="mobile-menu-2"
           aria-expanded="false"
         >
@@ -140,7 +146,7 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
               clip-rule="evenodd"
             ></path>
           </svg>
-        </button> */}
+        </button>
       </div>
     </div>
   );

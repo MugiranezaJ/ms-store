@@ -12,13 +12,13 @@ const ImageModel = ({ show, onClose, image, onPrev, onNext }) => {
   }
 
   return (
-    <div className="fixed z-50 top-0 left-0 w-full h-full overflow-y-auto bg-gray-900 bg-opacity-50 flex justify-center items-center">
-      <div className="relative bg-white rounded-lg w-full md:max-w-3xl">
+    <div className="fixed z-50 top-0 left-0 w-full h-full overflow-y-auto bg-gray-900 bg-opacity-50 flex justify-center items-center backdrop-blur-xl">
+      <div className="relative flex flex-col items-center justify-center bg-white bg-opacity-40 w-full h-full">
         <div
-          className="absolute top-0 right-0 m-4 cursor-pointer z-30"
+          className="absolute top-14 right-0 m-4 cursor-pointer z-30"
           onClick={onClose}
         >
-          <XMarkIcon className="h-6 w-6 text-gray-600 hover:text-blue-300" />
+          <XMarkIcon className="h-6 w-6 text-white hover:text-gray-300" />
         </div>
 
         <img
@@ -37,7 +37,7 @@ const ImageModel = ({ show, onClose, image, onPrev, onNext }) => {
           </div>
         </div>
 
-        <p className="text-gray-700 text-lg p-4">{image?.caption}</p>
+        <p className="text-lg p-4">{image?.caption}</p>
       </div>
     </div>
   );

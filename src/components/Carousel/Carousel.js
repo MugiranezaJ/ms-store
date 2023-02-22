@@ -157,6 +157,7 @@ function Carousel({
                       {index + 1} / {data.length}
                     </div>
                   )}
+                  <div className="slide-number"><span>Home</span></div>
                   {/* <div
                     style={{ backgroundImage: `url(${item.image})`, backgroundSize: 'cover'}}
                     className={"carousel-image"}

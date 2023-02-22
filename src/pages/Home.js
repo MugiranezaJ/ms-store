@@ -22,14 +22,14 @@ const Home = () => {
             </a>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-4">
-            <HolizontalCard navigate = {navigate}/>
-            <HolizontalCard navigate = {navigate}/>
-            <HolizontalCard navigate = {navigate}/>
-            <HolizontalCard navigate = {navigate}/>
-            <HolizontalCard navigate = {navigate}/>
-            <HolizontalCard navigate = {navigate}/>
-            <HolizontalCard navigate = {navigate}/>
-            <HolizontalCard navigate = {navigate}/>
+            <HolizontalCard navigate={navigate} />
+            <HolizontalCard navigate={navigate} />
+            <HolizontalCard navigate={navigate} />
+            <HolizontalCard navigate={navigate} />
+            <HolizontalCard navigate={navigate} />
+            <HolizontalCard navigate={navigate} />
+            <HolizontalCard navigate={navigate} />
+            <HolizontalCard navigate={navigate} />
           </div>
         </div>
 
@@ -41,15 +41,15 @@ const Home = () => {
               <span>See all</span>
             </a>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
           </div>
         </div>
 
@@ -61,15 +61,15 @@ const Home = () => {
               <span>See all</span>
             </a>
           </div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
+            <VerticalCard navigate={navigate} />
           </div>
         </div>
       </div>

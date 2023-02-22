@@ -24,7 +24,7 @@ function App() {
         />
         <div className="flex relative min-h-screen w-full mx-auto">
           <SideBar />
-          <div className="fixed top-[50px] w-[calc(100%-80px)] overflow-y-scroll h-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-thumb-rounded-full ml-20 pb-20 bg-[#353749] rounded-tl-lg box-border">
+          <div className="fixed top-[50px] w-full sm:w-[calc(100%-80px)] overflow-y-scroll h-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-thumb-rounded-full sm:ml-20 pb-20 bg-[#353749] rounded-tl-lg box-border">
             <AppRoutes />
           </div>
         </div>

@@ -3,6 +3,7 @@ import StarRating from "./StarRating";
 const HolizontalCard = ({ navigate }) => {
   return (
     <div
+      role={"button"}
       className="flex bg-[#454b61] hover:bg-[#464c5f] p-2 rounded-xl cursor-pointer hover:shadow-lg"
       onClick={() => navigate("details")}
     >
@@ -12,7 +13,6 @@ const HolizontalCard = ({ navigate }) => {
       <div className="flex flex-col flex-grow w-full p-2">
         <span className="line-clamp-1">WhatsApp igujj j</span>
         <span className=" line-clamp-1">Social</span>
-        {/* <span>Rating: 4</span> */}
         <StarRating />
       </div>
       <div className="text-right">

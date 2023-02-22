@@ -5,7 +5,7 @@ const SideBar = () => {
   const currenPage = location.pathname;
   console.log("currentPage:", currenPage, currenPage === "/");
   return (
-    <div className="fixed flex flex-col justify-between left-0 h-[calc(100%-50px)] w-20 bg-[#1e2024] py-5 px-2">
+    <div className="fixed hidden sm:flex flex-col justify-between left-0 h-[calc(100%-50px)] w-20 bg-[#1e2024] py-5 px-2">
       <div>
         <ul className=" space-y-5">
           <Link to={"/"}>
