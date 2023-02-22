@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HR from "../components/HR";
 import RatingCard from "../components/RatingCard";
 import StarRating from "../components/StarRating";
@@ -22,9 +22,33 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 import VerticalCard from "../components/VerticalCard";
 import StarIcon from "../components/StarIcon";
+import ImageGallery from "../components/ImageGallery";
 
 const Details = () => {
   const navigate = useNavigate();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScrollLeft = () => {
+    const gallery = document.getElementById('gallery');
+    if (scrollPosition < gallery.scrollWidth - gallery.offsetWidth) {
+      gallery.scrollBy({
+        left: gallery.offsetWidth,
+        behavior: 'smooth'
+      });
+      setScrollPosition(scrollPosition + gallery.offsetWidth);
+    }
+  };
+
+  const handleScrollRight = () => {
+    const gallery = document.getElementById('gallery');
+    if (scrollPosition > 0) {
+      gallery.scrollBy({
+        left: -gallery.offsetWidth,
+        behavior: 'smooth'
+      });
+      setScrollPosition(scrollPosition - gallery.offsetWidth);
+    }
+  };
+
   return (
     <div className="flex justify-between h-fit pr-2">
       {/* Side panel */}
@@ -92,10 +116,12 @@ const Details = () => {
       {/* Main body */}
       <div className="h-fit ml-[390px] space-y-3">
         {/* Description */}
-        <div className="relative min-h-fit pb-8 rounded-lg bg-slate-500 bg-opacity-40">
+        <div className="relative min-h-fit pb-2 rounded-lg bg-slate-500 bg-opacity-40">
           <p className="p-3">Screenshots</p>
           <HR />
-          <div className="p-3">Some images here!</div>
+          <div id="gallery" className="p-3 overflow-x-scroll scrollbar-none">
+            <ImageGallery scrollRight={handleScrollRight} scrollLeft={handleScrollLeft}/>
+          </div>
         </div>
         {/* Description */}
         <div className="relative min-h-fit pb-8 rounded-lg bg-slate-500 bg-opacity-40">
