@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      transform: {
+        'backface-hidden': 'translateY(0) backface-hidden',
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar"), require("@tailwindcss/line-clamp")],
   variants: {

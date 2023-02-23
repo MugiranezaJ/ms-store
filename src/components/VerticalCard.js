@@ -2,10 +2,12 @@ import StarRating from "./StarRating";
 
 const VerticalCard = ({ navigate }) => {
   return (
+    // TODO: add translation on hover and fix content shaky issue on hover
     <div
       role={"button"}
       onClick={() => navigate("details")}
-      className="flex flex-col bg-[#454b61] hover:bg-[#464c5f] bg-opacity-40 min-h-[300px] justify-between px-3 rounded-xl hover:shadow-lg"
+      style={{backfaceVisibility: 'hidden'}}
+      className="flex flex-col realtive transition duration-75 bg-slate-500 bg-opacity-20 hover:bg-slate-600 hover:bg-opacity-10 min-h-[300px] justify-between px-3 rounded-xl hover:shadow-lg"
     >
       <div className=" row-span-2 flex justify-center items-center pt-5 mt-5">
         <div className=" w-24 h-24 border border-slate-600 bg-slate-700 rounded"></div>

@@ -5,14 +5,14 @@ const SideBar = () => {
   const currenPage = location.pathname;
   console.log("currentPage:", currenPage, currenPage === "/");
   return (
-    <div className="fixed hidden sm:flex flex-col justify-between left-0 h-[calc(100%-50px)] w-20 bg-[#1e2024] py-5 px-2">
+    <div className="fixed hidden sm:flex flex-col justify-between left-0 h-[calc(100%-50px)] w-20 xbg-[#1e2024] py-5 px-2">
       <div>
         <ul className=" space-y-5">
           <Link to={"/"}>
             <li
               className={`${
-                currenPage === "/" ? "bg-slate-600 " : ""
-              }flex flex-col justify-center items-center h-20 hover:bg-slate-700 p-1 rounded`}
+                currenPage === "/" ? "bg-slate-400 bg-opacity-20 " : ""
+              }flex flex-col justify-center items-center h-20 hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded`}
             >
               <svg
                 height="20px"
@@ -38,8 +38,8 @@ const SideBar = () => {
           <Link to={"/library"}>
             <li
               className={`${
-                currenPage === "/library" ? "bg-slate-600 " : ""
-              } flex flex-col justify-center items-center hover:bg-slate-700 p-1 rounded`}
+                currenPage === "/library" ? "bg-slate-400 bg-opacity-20 " : ""
+              } flex flex-col justify-center items-center hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded`}
             >
               <svg
                 height={"20px"}
@@ -75,7 +75,7 @@ const SideBar = () => {
               <span className=" text-xs text-white">Libray</span>
             </li>
           </Link>
-          <li className="flex flex-col justify-center items-center hover:bg-slate-700 p-1 rounded">
+          <li className="flex flex-col justify-center items-center hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded">
             <svg
               height={"20px"}
               viewBox="0 0 24 24"

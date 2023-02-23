@@ -1,6 +1,6 @@
 const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
   return (
-    <div className="flex items-center justify-between sticky z-10 top-0 bg-[#1e2024] min-h-[50px] pl-8 md:pr-8">
+    <div className="flex items-center justify-between sticky z-10 top-0 xbg-[#1e2024] min-h-[50px] pl-8 md:pr-8">
 
       {/* Website icon */}
       <div>
