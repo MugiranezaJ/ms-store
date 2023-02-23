@@ -18,14 +18,14 @@ function App() {
   return (
     <BrowserRouter history={history}>
       <div className="flex-1 w-screen h-screen xbg-[#1e2024] bg-[url(https://wallpapercave.com/wp/wp9378806.jpg)] bg-cover text-white">
-        <div className="absolute inset-0 bg-neutral-800 bg-opacity-90 backdrop-blur-3xl">
+        <div className="absolute inset-0 bg-[#2e2f3a] bg-opacity-50 backdrop-blur-3xl backdrop-brightness-75">
           <TopNav
             showUserMenu={showUserMenu}
             toggleOpenUserMenu={toggleOpenUserMenu}
           />
           <div className="flex relative min-h-screen w-full xmx-auto">
             <SideBar />
-            <div className="fixed xtop-[50px] w-full sm:w-[calc(100%-80px)] overflow-y-scroll h-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-thumb-rounded-full sm:ml-20 pb-20 xbg-[#353749] rounded-tl-lg box-border">
+            <div className="fixed xtop-[50px] w-full sm:w-[calc(100%-80px)] overflow-y-scroll bg-[#272727] bg-opacity-70 h-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-thumb-rounded-full sm:ml-20 pb-20 xbg-[#353749] rounded-tl-lg box-border">
               <AppRoutes />
             </div>
           </div>

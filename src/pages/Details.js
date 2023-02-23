@@ -19,7 +19,7 @@ import {
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import VerticalCard from "../components/VerticalCard";
 import StarIcon from "../components/StarIcon";
 import ImageGallery from "../components/ImageGallery";
@@ -123,7 +123,7 @@ const Details = () => {
       </div>
       {/* Main body */}
       <div className="h-fit ml-3 lg:ml-[390px] space-y-3">
-        {/* Description */}
+        {/* Gallery */}
         <div className="relative min-h-fit pb-2 rounded-lg bg-slate-500 bg-opacity-10">
           <p className="p-3">Screenshots</p>
           <HR />
@@ -180,7 +180,7 @@ const Details = () => {
                 <span className="text-sm text-gray-300">5 years ago</span>
                 <div className="flex space-x-2">
                   <button className="flex items-center rounded-sm bg-opacity-40 hover:bg-slate-400 px-2">
-                    <HandThumbUpIcon class="h-5 w-5" />
+                    <HandThumbUpIcon className="h-5 w-5" />
                     <span>12</span>
                   </button>
                   <button className="flex items-center rounded-sm bg-opacity-40 hover:bg-slate-400 px-2">
@@ -377,9 +377,9 @@ const Details = () => {
         <div>
           <div className="flex justify-between py-4 mt-8">
             <span className=" text-xl font-semibold">Peaple also view</span>
-            <a href="/#">
-              <span className="pr-3 text-blue-300">See all</span>
-            </a>
+            <Link to={"/list"}>
+            <span className="pr-3 text-blue-300">See all</span>
+            </Link>
           </div>
           <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-4">
             <VerticalCard _navigate={navigate} />

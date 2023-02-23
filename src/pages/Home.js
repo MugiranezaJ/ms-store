@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import HolizontalCard from "../components/HolizontalCard";
 import ImageCarousel from "../components/ImageCarousel";
 import VerticalCard from "../components/VerticalCard";
@@ -17,19 +17,16 @@ const Home = () => {
         <div>
           <div className="flex justify-between py-4 mt-8">
             <span className=" text-xl font-semibold">Top free apps</span>
-            <a href="/#">
+            <Link to={"/list"}>
               <span>See all</span>
-            </a>
+            </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-4">
-            <HolizontalCard navigate={navigate} />
-            <HolizontalCard navigate={navigate} />
-            <HolizontalCard navigate={navigate} />
-            <HolizontalCard navigate={navigate} />
-            <HolizontalCard navigate={navigate} />
-            <HolizontalCard navigate={navigate} />
-            <HolizontalCard navigate={navigate} />
-            <HolizontalCard navigate={navigate} />
+            {
+              Array.from({length: 8}).map((_, index)=> (
+                <HolizontalCard key={index} navigate={navigate} />
+              ))
+            }
           </div>
         </div>
 
@@ -37,19 +34,16 @@ const Home = () => {
         <div>
           <div className="flex justify-between py-4 mt-8">
             <span className=" text-xl font-semibold">Top paid apps</span>
-            <a href="/#">
+            <Link to={"/list"}>
               <span>See all</span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
+            {
+              Array.from({length: 8}).map((_, index) => (
+                <VerticalCard key={index} navigate={navigate} />
+              ))
+            }
           </div>
         </div>
 
@@ -57,19 +51,16 @@ const Home = () => {
         <div>
           <div className="flex justify-between py-4 mt-8">
             <span className=" text-xl font-semibold">Top paid games</span>
-            <a href="/#">
+            <Link to={"/list"}>
               <span>See all</span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
-            <VerticalCard navigate={navigate} />
+            {
+              Array.from({length: 8}).map((_, index) => (
+                <VerticalCard key={index} navigate={navigate} />
+              ))
+            }
           </div>
         </div>
       </div>

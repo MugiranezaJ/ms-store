@@ -196,7 +196,7 @@ function Carousel({
       {thumbnails && (
         <div className="relative">
           <div
-            className="flex 2xl:justify-center items-center -mt-7 md:-mt-20 overflow-scroll bg-gradient-to-t from-[#353749] via-[#353749] to-transparent thumbnails"
+            className="flex 2xl:justify-center items-center -mt-7 md:-mt-20 overflow-scroll bg-gradient-to-t from-[#232226] via-[#232226] to-transparent thumbnails"
             id="thumbnail-div"
             style={{ maxWidth: width }}
           >
