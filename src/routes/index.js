@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Tabs from "../components/Tabs";
 import Details from "../pages/Details";
 import GameDetails from "../pages/GameDetails";
 import Home from "../pages/Home";
@@ -14,8 +13,7 @@ export default function AppRoutes({ authenticated, setAuthenticated }) {
       <Route exact path="/details" element={<Details />} />
       <Route exact path="/library" element={<Library />} />
       <Route exact path="/list" element={<ProductsList />} />
-      <Route exact path="/tabs" element={<Tabs />} />
-      <Route exact path="/fixed" element={<GameDetails/>} />
+      <Route exact path="/game_details" element={<GameDetails/>} />
       <Route path="*" exact={true} element={<Home />} />
     </Routes>
   );

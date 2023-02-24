@@ -20,7 +20,7 @@ const GameDetails = () => {
             'url("https://canvasstorageprod.blob.core.windows.net/assets/f7/a0/f7a005d2-05dc-470e-8ff6-37c7170e8f26.jpg?n=Promo%2012.6-12.12_ForzaHorizon5_Launch_Review-04_16x9.jpg")',
         }}
       >
-        <div className="overflow-y-auto h-screen  pt-96 scrollbar-thin scrollbar-thumb-slate-900 scrollbar-thumb-rounded-full">
+        <div className="overflow-y-auto h-screen md:pt-96 scrollbar-thin scrollbar-thumb-slate-900 scrollbar-thumb-rounded-full">
           <div className="min-h-96 pt-72 -mb-1 sm:px-5 md:px-10 lg:px-20 xl:px-40 bg-gradient-to-t to-transparent from-[#393e4d] xvia-slate-500">
             {/* Top panel */}
             <div className="relative flex rounded-lg bg-opacity-40 z-10">

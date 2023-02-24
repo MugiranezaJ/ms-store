@@ -39,7 +39,7 @@ function App() {
             showUserMenu={showUserMenu}
             toggleOpenUserMenu={toggleOpenUserMenu}
           />
-          <div className="flex relative min-h-screen w-full xmx-auto">
+          <div className="flex z-10 relative min-h-screen w-full xmx-auto">
             <SideBar />
             <div ref={myDivRef} className="fixed overflow-x-hidden xtop-[50px] w-full sm:w-[calc(100%-80px)] overflow-y-scroll bg-[#272727] bg-opacity-70 h-full scrollbar-thin scrollbar-thumb-slate-900 scrollbar-thumb-rounded-full sm:ml-20 pb-20 xbg-[#353749] rounded-tl-lg box-border">
               <AppRoutes />

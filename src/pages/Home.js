@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import GameVerticalCard from "../components/GameVerticalCard";
 import HolizontalCard from "../components/HolizontalCard";
 import ImageCarousel from "../components/ImageCarousel";
+import SplashScreen from "../components/SplashScreen";
 import VerticalCard from "../components/VerticalCard";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [showFirst, setShowFirst] = useState(true);
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
+
+  useEffect(() => {
+    const hasVisitedBefore = sessionStorage.getItem("hasVisitedBefore");
+
+    if (hasVisitedBefore) {
+      setShowSplashScreen(false);
+    } else {
+      setTimeout(() => {
+        setShowFirst(false);
+        sessionStorage.setItem("hasVisitedBefore", true);
+      }, 5000);
+    }
+
+  }, []);
+
+  if (showFirst && showSplashScreen) return <SplashScreen />;
+
   return (
     <div>
       {/* Image Carousel */}
@@ -22,11 +43,9 @@ const Home = () => {
             </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-4">
-            {
-              Array.from({length: 8}).map((_, index)=> (
-                <HolizontalCard key={index} navigate={navigate} />
-              ))
-            }
+            {Array.from({ length: 8 }).map((_, index) => (
+              <HolizontalCard key={index} navigate={navigate} />
+            ))}
           </div>
         </div>
 
@@ -39,11 +58,9 @@ const Home = () => {
             </Link>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            {
-              Array.from({length: 8}).map((_, index) => (
-                <VerticalCard key={index} navigate={navigate} />
-              ))
-            }
+            {Array.from({ length: 8 }).map((_, index) => (
+              <VerticalCard key={index} navigate={navigate} />
+            ))}
           </div>
         </div>
 
@@ -56,11 +73,9 @@ const Home = () => {
             </Link>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            {
-              Array.from({length: 8}).map((_, index) => (
-                <VerticalCard key={index} navigate={navigate} />
-              ))
-            }
+            {Array.from({ length: 8 }).map((_, index) => (
+              <GameVerticalCard key={index} navigate={navigate} />
+            ))}
           </div>
         </div>
       </div>

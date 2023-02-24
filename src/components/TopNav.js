@@ -13,7 +13,7 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
   }, [location.pathname]);
 
   return (
-    <div className="flex items-center justify-between sticky z-10 top-0 xbg-[#1e2024] min-h-[50px] pl-8 md:pr-8">
+    <div className="flex items-center justify-between sticky z-20 top-0 xbg-[#1e2024] min-h-[50px] pl-8 md:pr-8">
       {/* Website icon and back button for mobile devices */}
       <div className="flex space-x-3">
         {pathChanged && isNothome && (
