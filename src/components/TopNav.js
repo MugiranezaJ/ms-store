@@ -17,10 +17,10 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
       {/* Website icon and back button for mobile devices */}
       <div className="flex space-x-3">
         {pathChanged && isNothome && (
-          <div className="">
+          <div className="sm:hidden ">
             <button
               onClick={() => history.back()}
-              className=" sm:hidden p-2 rounded-2xl bg-slate-400 bg-opacity-30"
+              className="p-2 rounded-2xl bg-slate-400 bg-opacity-30"
             >
               <ArrowLeftIcon className="w-5" />
             </button>
