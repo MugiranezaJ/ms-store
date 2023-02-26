@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageList from "./ImageList";
 import ImageModel from "./ImageModel";
 
-const ImageGallery = ({ scrollRight, scrollLeft }) => {
+const ImageGallery = ({ scrollRight, scrollLeft, type }) => {
   const [images] = useState([
     {
       id: 1,
@@ -65,7 +65,7 @@ const ImageGallery = ({ scrollRight, scrollLeft }) => {
       />
       {/* {showModel && ( */}
       <ImageModel
-        show={showModel}
+        show={type === 'game' ? false : showModel}
         image={images[currentImageIndex]}
         onClose={handleModelClose}
         onNext={handleNextImage}

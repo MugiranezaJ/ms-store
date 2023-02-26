@@ -102,7 +102,7 @@ const GameDetails = () => {
           {/* Joiner div, hhhhhhhh */}
           <div className="bg-[#393e4d] bg-opacity-90 backdrop-blur-2xl w-full h-4"></div>
           <div className="relative px-5 md:px-10 lg:px-20 xl:px-40 pt-10 pb-24 bg-slate-700 bg-opacity-80 backdrop-blur-3xl space-y-3">
-            <Gallery />
+            <Gallery type={'game'} />
             <Description />
             <RatingsAndReviews />
             <SystemRequirements />

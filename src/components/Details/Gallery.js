@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HR from "../HR";
 import ImageGallery from "../ImageGallery";
 
-const Gallery = () => {
+const Gallery = ({ type }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScrollLeft = () => {
     const gallery = document.getElementById("gallery");
@@ -31,6 +31,7 @@ const Gallery = () => {
       <HR />
       <div id="gallery" className="p-3 overflow-x-scroll scrollbar-none">
         <ImageGallery
+          type={type}
           scrollRight={handleScrollRight}
           scrollLeft={handleScrollLeft}
         />
