@@ -1,7 +1,7 @@
 import { FlagIcon, HandThumbDownIcon, HandThumbUpIcon, TrophyIcon } from "@heroicons/react/24/outline";
 import HR from "../HR";
-import RatingCard from "../RatingCard";
-import StarRating from "../StarRating";
+import RatingCard from "../Ratings/RatingCard";
+import StarRating from "../Ratings/StarRating";
 
 const RatingsAndReviews = () => {
     return (

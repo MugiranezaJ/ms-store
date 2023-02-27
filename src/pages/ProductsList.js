@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import VerticalCard from "../components/VerticalCard";
+import VerticalCard from "../components/AppVerticalCard";
 
 const ProductsList = () => {
   const navigate = useNavigate();

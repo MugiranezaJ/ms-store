@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import GameVerticalCard from "../components/GameVerticalCard";
-import HolizontalCard from "../components/HolizontalCard";
+import HolizontalCard from "../components/AppHolizontalCard";
 import ImageCarousel from "../components/ImageCarousel";
 import SplashScreen from "../components/SplashScreen";
-import VerticalCard from "../components/VerticalCard";
+import VerticalCard from "../components/AppVerticalCard";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,17 +12,19 @@ const Home = () => {
   const [showSplashScreen, setShowSplashScreen] = useState(true);
 
   useEffect(() => {
-    const hasVisitedBefore = sessionStorage.getItem("hasVisitedBefore");
+    const checkSession = async () => {
+      const hasVisitedBefore = await sessionStorage.getItem("hasVisitedBefore");
 
-    if (hasVisitedBefore) {
-      setShowSplashScreen(false);
-    } else {
-      setTimeout(() => {
-        setShowFirst(false);
-        sessionStorage.setItem("hasVisitedBefore", true);
-      }, 5000);
-    }
-
+      if (hasVisitedBefore) {
+        setShowSplashScreen(false);
+      } else {
+        setTimeout(() => {
+          setShowFirst(false);
+          sessionStorage.setItem("hasVisitedBefore", true);
+        }, 5000);
+      }
+    };
+    checkSession();
   }, []);
 
   if (showFirst && showSplashScreen) return <SplashScreen />;

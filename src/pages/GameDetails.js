@@ -5,7 +5,7 @@ import Gallery from "../components/Details/Gallery";
 import RatingsAndReviews from "../components/Details/RatingsAndReviews";
 import SystemRequirements from "../components/Details/SystemRequirements";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import StarIcon from "../components/StarIcon";
+import StarIcon from "../components/Ratings/StarIcon";
 import { Link, useNavigate } from "react-router-dom";
 import GameVerticalCard from "../components/GameVerticalCard";
 

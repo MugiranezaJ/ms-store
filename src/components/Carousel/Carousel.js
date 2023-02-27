@@ -173,17 +173,17 @@ function Carousel({
                   />
                   <div className="flex flex-col justify-center absolute bottom-0 h-full text-left pl-8 bg-gradient-to-r from-neutral-900 to-transparent space-y-4">
                     <span className="sm:text-xl md:text-2xl font-normal opacity-70">
-                      Free
+                      {item?.price}
                     </span>
                     <div className="flex flex-col">
                       <span className="sm:text-2xl md:text-5xl font-bold">
                         {item?.caption}
                       </span>
                       <span className="sm:text-xl md:text-2xl font-normal opacity-70">
-                        Video Editor - Spark Your Creativity
+                        {item?.slogan}
                       </span>
                     </div>
-                    <button className="w-fit text-2xl px-5 pb-1 rounded bg-slate-300 bg-opacity-40">
+                    <button className="w-fit text-2xl px-5 pb-1 rounded bg-slate-600 bg-opacity-50">
                       See details
                     </button>
                   </div>

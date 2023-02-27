@@ -1,4 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
+import { FaGamepad } from 'react-icons/fa'
+import {TbApps} from 'react-icons/tb'
+// import {GiClapperboard} from 'react-icons/gi'
+import {MdHomeFilled} from 'react-icons/md'
 
 const SideBar = () => {
   const location = useLocation();
@@ -6,30 +10,48 @@ const SideBar = () => {
   return (
     <div className="fixed hidden sm:flex flex-col justify-between left-0 h-[calc(100%-50px)] w-20 xbg-[#1e2024] py-5 px-2">
       <div>
-        <ul className=" space-y-5">
-          <Link to={"/"}>
-            <li
-              className={`${
-                currenPage === "/" ? "bg-slate-400 bg-opacity-20 " : ""
-              }flex flex-col justify-center items-center h-20 hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded`}
-            >
-              <svg
-                height="20px"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.99999 10L12 3L20 10L20 20H15V16C15 15.2044 14.6839 14.4413 14.1213 13.8787C13.5587 13.3161 12.7956 13 12 13C11.2043 13 10.4413 13.3161 9.87868 13.8787C9.31607 14.4413 9 15.2043 9 16V20H4L3.99999 10Z"
-                  stroke="#fff"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+        <ul className=" space-y-1">
+        
+          <li
+            className={`${
+              currenPage === "/" ? "bg-slate-400 bg-opacity-20 " : ""
+            } hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded`}
+          >
+            <Link to={"/"} className="flex flex-col justify-center items-center h-20">
+              <MdHomeFilled size={30} />
               <span className=" text-xs text-white">Home</span>
-            </li>
-          </Link>
+            </Link>
+          </li>
+          <li
+            className={`${
+              currenPage === "/apps" ? "bg-slate-400 bg-opacity-20 " : ""
+            } hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded`}
+          >
+            <Link to={"/apps"} className="flex flex-col justify-center items-center h-20 text-center">
+              <TbApps size={30} />
+              <span className=" text-xs text-white">Apps</span>
+            </Link>
+          </li>
+          <li
+            className={`${
+              currenPage === "/games" ? "bg-slate-400 bg-opacity-20 " : ""
+            } hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded`}
+          >
+            <Link to={"/games"} className="flex flex-col justify-center items-center h-20">
+             <FaGamepad size={30} />
+              <span className=" text-xs text-white">Games</span>
+            </Link>
+          </li>
+          {/* <li
+            className={`${
+              currenPage === "/games" ? "bg-slate-400 bg-opacity-20 " : ""
+            } hover:bg-opacity-10 hover:bg-slate-500 p-1 rounded`}
+          >
+            <Link to={"/movies"} className="flex flex-col justify-center items-center h-20 text-center">
+              <GiClapperboard size={30} />
+              <span className=" text-xs text-white">Movies &TV</span>
+            </Link>
+          </li> */}
         </ul>
       </div>
       <div className="">

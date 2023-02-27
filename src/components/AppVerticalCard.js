@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import StarRating from "./StarRating";
+import StarRating from "./Ratings/StarRating";
 
 const VerticalCard = ({ navigate }) => {
   const [showSkeleton, setShowSkeleton] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setShowSkeleton(false);
-    }, 3000);
+    }, 1500);
   }, []);
   if (showSkeleton) {
     return (
@@ -20,7 +20,7 @@ const VerticalCard = ({ navigate }) => {
       // TODO: add translation on hover and fix content shaky issue on hover
       <div
         role={"button"}
-        onClick={() => navigate("details")}
+        onClick={() => navigate("/details")}
         style={{ backfaceVisibility: "hidden" }}
         className="flex flex-col realtive transition duration-75 bg-slate-500 bg-opacity-20 hover:bg-slate-600 hover:bg-opacity-10 min-h-[300px] justify-between px-3 rounded-xl hover:shadow-lg"
       >

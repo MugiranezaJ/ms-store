@@ -33,7 +33,6 @@ const ImageGallery = ({ scrollRight, scrollLeft, type }) => {
   };
 
   const handleModelClose = () => {
-    console.log("closing......");
     setShowModel(false);
   };
 

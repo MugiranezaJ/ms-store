@@ -12,6 +12,22 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
     setPathChanged(true);
   }, [location.pathname]);
 
+  const [isMediumScreen, setIsMediumScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMediumScreen(width <= 640);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Check on component mount
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="flex items-center justify-between sticky z-20 top-0 xbg-[#1e2024] min-h-[50px] pl-8 md:pr-8">
       {/* Website icon and back button for mobile devices */}
@@ -97,7 +113,7 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
             alt="user avator"
           />
         </button>
-        {/* <!-- Dropdown menu --> */}
+        {/* Dropdown menu */}
         <div
           className={`${
             showUserMenu ? "" : `hidden`
@@ -106,29 +122,51 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
         >
           <div className="px-4 py-3">
             <span className="block text-sm text-gray-900 dark:text-white">
-              Bonnie Green
+              Mugiraneza Jackson
             </span>
             <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">
-              name@flowbite.com
+              mugiranezajx@gmail.com
             </span>
           </div>
           <ul className="py-2" aria-labelledby="user-menu-button">
-            {/* <li>
-              <a
-                href="/#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-              >
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a
-                href="/#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-              >
-                Settings
-              </a>
-            </li> */}
+            {isMediumScreen && (<>
+              <li>
+                <Link
+                  to="/"
+                  onClick={toggleOpenUserMenu}
+                  className="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="apps"
+                  onClick={toggleOpenUserMenu}
+                  className="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >
+                  Apps
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="games"
+                  onClick={toggleOpenUserMenu}
+                  className="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >
+                  Games
+                </Link>
+              </li>
+              {/* <li>
+                <Link
+                  to="movies"
+                  onClick={toggleOpenUserMenu}
+                  className="block px-4 py-2 text-sm text-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >
+                  Movies & TV
+                </Link>
+              </li> */}
+            </>)}
             <li>
               <Link
                 to="library"
@@ -146,6 +184,7 @@ const SideNav = ({ showUserMenu, toggleOpenUserMenu }) => {
                 Sign out
               </a>
             </li>
+            
           </ul>
         </div>
         {/* <button

@@ -18,11 +18,9 @@ function App() {
 
   // Check this and fix the issue with auto scroll to the top even when you click on user icon
   function ScrollToTopOnRouteChange() {
-    console.log("trying to reset scroll position..............")
     const { pathname } = useLocation();
   
     useEffect(() => {
-      console.log("reseting to 0,0----------------")
       window.scrollTo(0, 0);
       myDivRef.current.scrollTop = 0;
     }, [pathname]);

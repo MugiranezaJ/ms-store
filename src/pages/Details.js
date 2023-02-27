@@ -1,8 +1,8 @@
 import React from "react";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { Link, useNavigate } from "react-router-dom";
-import VerticalCard from "../components/VerticalCard";
-import StarIcon from "../components/StarIcon";
+import VerticalCard from "../components/AppVerticalCard";
+import StarIcon from "../components/Ratings/StarIcon";
 import RatingsAndReviews from "../components/Details/RatingsAndReviews";
 import SystemRequirements from "../components/Details/SystemRequirements";
 import AdditionalRequirements from "../components/Details/AdditionalRequirements";
@@ -109,11 +109,9 @@ const Details = () => {
             </Link>
           </div>
           <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-4">
-            {
-              Array.from({length: 8}).map((_, index) => (
-                <VerticalCard _navigate={navigate} />
-              ))
-            }
+            {Array.from({ length: 8 }).map((_, index) => (
+              <VerticalCard key={index} navigate={navigate} />
+            ))}
           </div>
         </div>
       </div>
